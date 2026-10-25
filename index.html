@@ -45,19 +45,86 @@ footer{border-top:1px solid var(--line);padding:22px 18px;color:#9f918a;font-siz
     <button class="filter" data-filter="Lainnya">Lainnya</button>
   </nav>
   <section class="grid" id="menu" aria-live="polite"></section>
-  <div class="note"><div class="symbol">♥</div><div><strong>Racik sesuai seleramu</strong><p>Silakan pilih topping yang kamu suka. Kalau mau memastikan ketersediaan topping hari ini, tanyakan langsung kepada tim Seblak CO.</p></div></div>
+  <div class="note" 
+<div class="note">
+  <div class="symbol">♥</div>
+  <div>
+    <strong>Gratis Pelengkap & Kemasan</strong>
+    <p>
+      Setiap pembelian seblak sudah termasuk sayur, bawang goreng,
+      jeruk asam, sendok, sumpit, dan tisu secara gratis.
+      <br><br>
+      Mau dibawa pulang? Sisa seblak bisa dikemas menggunakan
+      mangkuk kertas secara gratis.
+    </p>
+  </div>
+</div>
+
 </main>
 <footer><b>SEBLAK CO.</b> · Hangat, pedas, dan dibuat dengan hati.</footer>
 <script>
 const items=[
-{name:"Cikuwa Mini",price:2000,category:"Olahan ikan",emoji:"🍥",search:"Japanese fish cake chikuwa food close up"},
-{name:"Sosis Jumbo Mini",price:5000,category:"Sosis",emoji:"🌭",search:"mini red sausage food close up"},
-{name:"Fishroll",price:3000,category:"Olahan ikan",emoji:"🍢",search:"fish roll surimi fish cake food"},
-{name:"Dumpling Ayam",price:3000,category:"Dumpling",emoji:"🥟",search:"chicken dumpling steamed food"},
-{name:"Dumpling Keju",price:3000,category:"Dumpling",emoji:"🥟",search:"cheese dumpling food close up"},
-{name:"Otak-otak",price:1000,category:"Olahan ikan",emoji:"🍢",search:"otak otak fish cake Indonesian food"},
-{name:"Dimsum",price:3000,category:"Lainnya",emoji:"🥟",search:"steamed dim sum dumplings"}
+
+const items = [
+  // Rp1.000
+  {name:"Sosis Short Chicken",price:1000,category:"Sosis",emoji:"🌭"},
+  {name:"Snow Trip",price:1000,category:"Olahan ikan",emoji:"🍢"},
+  {name:"Otak-otak Ikan",price:1000,category:"Olahan ikan",emoji:"🍢"},
+  {name:"Fisoy",price:1000,category:"Olahan ikan",emoji:"🍢"},
+  {name:"Bakso Ayam",price:1000,category:"Bakso",emoji:"🍡"},
+  {name:"Bakso Ikan",price:1000,category:"Bakso",emoji:"🍡"},
+  {name:"Bakso Sapi",price:1000,category:"Bakso",emoji:"🍡"},
+  {name:"Scallop",price:1000,category:"Olahan ikan",emoji:"🍢"},
+  {name:"Kerupuk",price:1000,category:"Lainnya",emoji:"🥨"},
+  {name:"Makaroni",price:1000,category:"Lainnya",emoji:"🍝"},
+  {name:"Soun",price:1000,category:"Lainnya",emoji:"🍜"},
+  {name:"Pilus",price:1000,category:"Lainnya",emoji:"🥣"},
+  {name:"Kembang Cumi",price:1000,category:"Olahan ikan",emoji:"🍢"},
+
+  // Rp2.000
+  {name:"Cikuwa Mini",price:2000,category:"Olahan ikan",emoji:"🍥"},
+  {name:"Sosis Long Cow",price:2000,category:"Sosis",emoji:"🌭"},
+  {name:"Cuanki All",price:2000,category:"Lainnya",emoji:"🍲"},
+  {name:"Short Odeng",price:2000,category:"Olahan ikan",emoji:"🍢"},
+
+  // Rp3.000
+  {name:"Sosis Long Chicken",price:3000,category:"Sosis",emoji:"🌭"},
+  {name:"Sosis Short Cow",price:3000,category:"Sosis",emoji:"🌭"},
+  {name:"Fishroll",price:3000,category:"Olahan ikan",emoji:"🍢"},
+  {name:"Dumpling Chicken",price:3000,category:"Dumpling",emoji:"🥟"},
+  {name:"Dumpling Cheese",price:3000,category:"Dumpling",emoji:"🥟"},
+  {name:"Bakso Urat",price:3000,category:"Bakso",emoji:"🍡"},
+  {name:"Dimsum",price:3000,category:"Dumpling",emoji:"🥟"},
+  {name:"Orange Twister",price:3000,category:"Lainnya",emoji:"🍊"},
+  {name:"Crabstik",price:3000,category:"Olahan ikan",emoji:"🦀"},
+  {name:"Indome",price:3000,category:"Mie",emoji:"🍜"},
+  {name:"Sosis Cocktail",price:3000,category:"Sosis",emoji:"🌭"},
+  {name:"Mihun",price:3000,category:"Mie",emoji:"🍜"},
+  {name:"Telur",price:3000,category:"Lainnya",emoji:"🥚"},
+
+  // Rp4.000
+  {name:"Ekomi / Intermi",price:4000,category:"Mie",emoji:"🍜"},
+  {name:"Kwetiau",price:4000,category:"Mie",emoji:"🍜"},
+
+  // Rp5.000
+  {name:"Sosis Jumbo Mini",price:5000,category:"Sosis",emoji:"🌭"},
+  {name:"Sosis Short",price:5000,category:"Sosis",emoji:"🌭"},
+  {name:"Air Mineral",price:5000,category:"Minuman",emoji:"💧"},
+  {name:"BIG Odeng",price:5000,category:"Olahan ikan",emoji:"🍢"},
+
+  // Rp7.000
+  {name:"Indomie Jumbo",price:7000,category:"Mie",emoji:"🍜"},
+
+  // Rp10.000
+  {name:"Sosis Large",price:10000,category:"Sosis",emoji:"🌭"},
+  {name:"Otak-otak Singapore",price:10000,category:"Olahan ikan",emoji:"🍢"},
+  {name:"Enoki",price:10000,category:"Sayuran",emoji:"🍄"},
+
+  // Rp15.000
+  {name:"Ceker Tanpa Tulang",price:15000,category:"Lainnya",emoji:"🍗",unit:"/ porsi"},
+  {name:"Mie Pedas",price:15000,category:"Mie",emoji:"🍜",unit:"/ porsi"}
 ];
+
 const rupiah=n=>"Rp"+n.toLocaleString("id-ID");
 const menu=document.getElementById("menu");
 function render(filter="Semua"){
