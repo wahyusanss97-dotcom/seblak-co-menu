@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#151313">
+<meta name="description" content="Daftar topping dan harga Seblak CO. Pilih topping favoritmu!">
+<title>Menu Topping | Seblak CO.</title>
+<style>
+:root{--bg:#111010;--panel:#1c1919;--panel2:#262020;--red:#c72c35;--red2:#ed454c;--cream:#fff4e9;--muted:#c5b7b0;--line:#3a2d2d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.hero{padding:32px 20px 28px;background:radial-gradient(ellipse at top right,#682025 0%,#241416 42%,#111010 78%);border-bottom:1px solid var(--line)}
+.wrap{width:min(100%,980px);margin:auto}.brandline{display:flex;align-items:center;gap:10px;color:#ffb4a9;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+.logo{width:38px;height:38px;border:1px solid #e14b50;border-radius:12px;display:grid;place-items:center;background:#351619;font-size:20px}
+h1{font-size:clamp(36px,8vw,64px);line-height:.98;letter-spacing:-.055em;margin:24px 0 12px;font-weight:900}h1 span{color:var(--red2)}
+.subtitle{color:#e2d1c8;max-width:460px;line-height:1.6;margin:0;font-size:15px}
+.pill{display:inline-block;margin-top:20px;padding:8px 12px;border:1px solid #7d3438;border-radius:999px;color:#ffd8d1;font-size:12px}
+main{padding:24px 18px 54px}.intro{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:16px}.intro h2{font-size:24px;margin:0 0 5px}.intro p{margin:0;color:var(--muted);font-size:13px}
+.count{white-space:nowrap;color:#ffb8ae;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:8px 10px}
+.filters{display:flex;gap:8px;overflow:auto;padding:4px 0 18px}.filter{border:1px solid var(--line);border-radius:999px;background:#1b1717;color:#e5d7d0;padding:10px 14px;font:inherit;font-size:13px;white-space:nowrap;cursor:pointer}.filter.active{background:var(--red);border-color:var(--red);color:white}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:linear-gradient(145deg,#211d1d,#181515);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-2px);border-color:#8d373b}
+.food{height:145px;background:linear-gradient(135deg,#332627,#1b1818);display:grid;place-items:center;overflow:hidden}.food img{width:100%;height:100%;object-fit:cover;display:block}.food .emoji{font-size:58px;filter:drop-shadow(0 8px 10px #0008)}
+.info{padding:13px}.tag{font-size:10px;color:#ffaaa5;letter-spacing:.12em;text-transform:uppercase;font-weight:800}.name{font-size:15px;font-weight:750;margin:7px 0 11px;min-height:36px;line-height:1.25}.bottom{display:flex;justify-content:space-between;align-items:center;gap:6px}.price{font-size:17px;font-weight:850;letter-spacing:-.03em}.unit{font-size:10px;color:var(--muted);font-weight:500;letter-spacing:0}.dot{width:7px;height:7px;border-radius:50%;background:#e34249;display:inline-block;margin-right:5px}
+.note{margin-top:22px;padding:18px;border-radius:16px;background:#1b1717;border:1px solid var(--line);display:flex;gap:12px;align-items:start}.note .symbol{font-size:21px}.note strong{display:block;font-size:14px;margin-bottom:4px}.note p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}
+footer{border-top:1px solid var(--line);padding:22px 18px;color:#9f918a;font-size:11px;text-align:center;letter-spacing:.04em}footer b{color:#ffaaa5}
+@media(min-width:650px){.hero{padding:44px 28px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}main{padding:32px 28px 60px}.food{height:180px}.info{padding:16px}.name{font-size:17px}.price{font-size:19px}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:360px){.grid{gap:8px}.food{height:115px}.info{padding:10px}.name{font-size:13px}.price{font-size:15px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <div class="brandline"><div class="logo">🌶</div><span>Seblak Prasmanan</span></div>
+  <h1>SEBLAK <span>CO.</span></h1>
+  <p class="subtitle">Pilih topping favoritmu, racik sesuai seleramu. Dibuat hangat, dinikmati dengan hati.</p>
+  <div class="pill">✦ MENU TOPPING & DAFTAR HARGA</div>
+</div></header>
+<main class="wrap">
+  <div class="intro"><div><h2>Pilih Topping</h2><p>Harga per item · cek pilihanmu di sini</p></div><div class="count" id="count">7 pilihan</div></div>
+  <nav class="filters" aria-label="Kategori menu">
+    <button class="filter active" data-filter="Semua">Semua topping</button>
+    <button class="filter" data-filter="Olahan ikan">Olahan ikan</button>
+    <button class="filter" data-filter="Sosis">Sosis</button>
+    <button class="filter" data-filter="Dumpling">Dumpling</button>
+    <button class="filter" data-filter="Lainnya">Lainnya</button>
+  </nav>
+  <section class="grid" id="menu" aria-live="polite"></section>
+  <div class="note"><div class="symbol">♥</div><div><strong>Racik sesuai seleramu</strong><p>Silakan pilih topping yang kamu suka. Kalau mau memastikan ketersediaan topping hari ini, tanyakan langsung kepada tim Seblak CO.</p></div></div>
+</main>
+<footer><b>SEBLAK CO.</b> · Hangat, pedas, dan dibuat dengan hati.</footer>
+<script>
+const items=[
+{name:"Cikuwa Mini",price:2000,category:"Olahan ikan",emoji:"🍥",search:"Japanese fish cake chikuwa food close up"},
+{name:"Sosis Jumbo Mini",price:5000,category:"Sosis",emoji:"🌭",search:"mini red sausage food close up"},
+{name:"Fishroll",price:3000,category:"Olahan ikan",emoji:"🍢",search:"fish roll surimi fish cake food"},
+{name:"Dumpling Ayam",price:3000,category:"Dumpling",emoji:"🥟",search:"chicken dumpling steamed food"},
+{name:"Dumpling Keju",price:3000,category:"Dumpling",emoji:"🥟",search:"cheese dumpling food close up"},
+{name:"Otak-otak",price:1000,category:"Olahan ikan",emoji:"🍢",search:"otak otak fish cake Indonesian food"},
+{name:"Dimsum",price:3000,category:"Lainnya",emoji:"🥟",search:"steamed dim sum dumplings"}
+];
+const rupiah=n=>"Rp"+n.toLocaleString("id-ID");
+const menu=document.getElementById("menu");
+function render(filter="Semua"){
+ const shown=items.filter(x=>filter==="Semua"||x.category===filter||(filter==="Lainnya"&&x.category==="Lainnya"));
+ document.getElementById("count").textContent=shown.length+" pilihan";
+ menu.innerHTML=shown.map(x=>`<article class="card"><div class="food"><div class="emoji" role="img" aria-label="${x.name}">${x.emoji}</div></div><div class="info"><div class="tag"><span class="dot"></span>${x.category}</div><div class="name">${x.name}</div><div class="bottom"><div class="price">${rupiah(x.price)} <span class="unit">/ item</span></div></div></div></article>`).join("");
+}
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.filter)}));
+render();
+</script>
+</body></html>
