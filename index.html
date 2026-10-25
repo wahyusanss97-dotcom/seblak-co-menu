@@ -63,15 +63,43 @@ footer{border-top:1px solid var(--line);padding:22px 18px;color:#9f918a;font-siz
 </main>
 <footer><b>SEBLAK CO.</b> · Hangat, pedas, dan dibuat dengan hati.</footer>
 <script>
+
 const items=[
-{name:"Cikuwa Mini",price:2000,category:"Olahan ikan",emoji:"🍥",search:"Japanese fish cake chikuwa food close up"},
-{name:"Sosis Jumbo Mini",price:5000,category:"Sosis",emoji:"🌭",search:"mini red sausage food close up"},
-{name:"Fishroll",price:3000,category:"Olahan ikan",emoji:"🍢",search:"fish roll surimi fish cake food"},
-{name:"Dumpling Ayam",price:3000,category:"Dumpling",emoji:"🥟",search:"chicken dumpling steamed food"},
-{name:"Dumpling Keju",price:3000,category:"Dumpling",emoji:"🥟",search:"cheese dumpling food close up"},
-{name:"Otak-otak",price:1000,category:"Olahan ikan",emoji:"🍢",search:"otak otak fish cake Indonesian food"},
-{name:"Dimsum",price:3000,category:"Lainnya",emoji:"🥟",search:"steamed dim sum dumplings"}
+{name:"Cikuwa Mini",price:2000,category:"Olahan ikan",emoji:"🍥"},
+{name:"Sosis Short Chicken",price:1000,category:"Sosis",emoji:"🌭"},
+{name:"Sosis Long Chicken",price:3000,category:"Sosis",emoji:"🌭"},
+{name:"Sosis Short Cow",price:3000,category:"Sosis",emoji:"🌭"},
+{name:"Sosis Long Cow",price:2000,category:"Sosis",emoji:"🌭"},
+{name:"Snow Trip",price:1000,category:"Lainnya",emoji:"🍢"},
+{name:"Otak-otak Ikan",price:1000,category:"Olahan ikan",emoji:"🍢"},
+{name:"Fishroll",price:3000,category:"Olahan ikan",emoji:"🍢"},
+{name:"Dumpling Chicken",price:3000,category:"Dumpling",emoji:"🥟"},
+{name:"Dumpling Cheese",price:3000,category:"Dumpling",emoji:"🥟"},
+{name:"Sosis Large",price:10000,category:"Sosis",emoji:"🌭"},
+{name:"Sosis Short",price:5000,category:"Sosis",emoji:"🌭"},
+{name:"Fisoy",price:1000,category:"Olahan ikan",emoji:"🍢"},
+{name:"Bakso Ayam",price:1000,category:"Lainnya",emoji:"🍡"},
+{name:"Bakso Ikan",price:1000,category:"Olahan ikan",emoji:"🍡"},
+{name:"Bakso Sapi",price:1000,category:"Lainnya",emoji:"🍡"},
+{name:"Bakso Urat",price:3000,category:"Lainnya",emoji:"🍡"},
+{name:"Otak-otak Singapore",price:10000,category:"Olahan ikan",emoji:"🍢"},
+{name:"Dimsum",price:3000,category:"Lainnya",emoji:"🥟"},
+{name:"Orange Twister",price:3000,category:"Lainnya",emoji:"🍢"},
+{name:"Crabstik",price:3000,category:"Olahan ikan",emoji:"🍢"},
+{name:"Scallop",price:1000,category:"Olahan ikan",emoji:"🍢"},
+{name:"Enoki",price:10000,category:"Lainnya",emoji:"🍄"},
+{name:"Indome",price:3000,category:"Lainnya",emoji:"🍜"},
+{name:"Cuanki ALL",price:2000,category:"Lainnya",emoji:"🍡"},
+{name:"Krupuk",price:1000,category:"Lainnya",emoji:"🥠"},
+{name:"Makaroni",price:1000,category:"Lainnya",emoji:"🍝"},
+{name:"Kwetiau",price:4000,category:"Lainnya",emoji:"🍜"},
+{name:"Ekomi / Intermi",price:4000,category:"Lainnya",emoji:"🍜"},
+{name:"Indomie Jumbo",price:7000,category:"Lainnya",emoji:"🍜"},
+{name:"Soun",price:1000,category:"Lainnya",emoji:"🍜"},
+{name:"Mihun",price:1000,category:"Lainnya",emoji:"🍜"},
+{name:"Sosis Cocktail",price:3000,category:"Sosis",emoji:"🌭"}
 ];
+
 const rupiah=n=>"Rp"+n.toLocaleString("id-ID");
 const menu=document.getElementById("menu");
 function render(filter="Semua"){
