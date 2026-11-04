@@ -212,49 +212,231 @@ footer strong {
 
 <script>
 const items = [
+
   {
     name: "Cikuwa Mini",
     price: 2000,
     category: "Olahan",
-    image: "https://placehold.co/400x300/241717/ffffff?text=Cikuwa+Mini"
+    emoji: "🍥"
   },
   {
     name: "Sosis Jumbo Mini",
     price: 5000,
     category: "Olahan",
-    image: "https://placehold.co/400x300/241717/ffffff?text=Sosis"
+    emoji: "🌭"
   },
   {
     name: "Fishroll",
     price: 3000,
     category: "Seafood",
-    image: "https://placehold.co/400x300/241717/ffffff?text=Fishroll"
+    emoji: "🐟"
   },
   {
     name: "Dumpling Ayam",
     price: 3000,
     category: "Dumpling",
-    image: "https://placehold.co/400x300/241717/ffffff?text=Dumpling+Ayam"
+    emoji: "🥟"
   },
   {
     name: "Dumpling Keju",
     price: 3000,
     category: "Dumpling",
-    image: "https://placehold.co/400x300/241717/ffffff?text=Dumpling+Keju"
+    emoji: "🧀"
   },
   {
     name: "Otak-otak",
     price: 1000,
     category: "Seafood",
-    image: "https://placehold.co/400x300/241717/ffffff?text=Otak-Otak"
+    emoji: "🐟"
   },
   {
     name: "Dimsum",
     price: 3000,
     category: "Dumpling",
-    image: "https://placehold.co/400x300/241717/ffffff?text=Dimsum"
+    emoji: "🥟"
+  },
+  {
+    name: "Sosis Short Chicken",
+    price: 1000,
+    category: "Olahan",
+    emoji: "🌭"
+  },
+  {
+    name: "Sosis Long Chicken",
+    price: 1000,
+    category: "Olahan",
+    emoji: "🌭"
+  },
+  {
+    name: "Sosis Short Cow",
+    price: 1000,
+    category: "Olahan",
+    emoji: "🌭"
+  },
+  {
+    name: "Sosis Long Cow",
+    price: 1000,
+    category: "Olahan",
+    emoji: "🌭"
+  },
+  {
+    name: "Snow Trip",
+    price: 1000,
+    category: "Seafood",
+    emoji: "🦀"
+  },
+  {
+    name: "Otak-otak Ikan",
+    price: 1000,
+    category: "Seafood",
+    emoji: "🐟"
+  },
+  {
+    name: "Dumpling Chicken",
+    price: 3000,
+    category: "Dumpling",
+    emoji: "🥟"
+  },
+  {
+    name: "Dumpling Cheese",
+    price: 3000,
+    category: "Dumpling",
+    emoji: "🧀"
+  },
+  {
+    name: "Sosis Large",
+    price: 1000,
+    category: "Olahan",
+    emoji: "🌭"
+  },
+  {
+    name: "Sosis Short",
+    price: 1000,
+    category: "Olahan",
+    emoji: "🌭"
+  },
+  {
+    name: "Fisoy",
+    price: 1000,
+    category: "Olahan",
+    emoji: "🍢"
+  },
+  {
+    name: "Bakso Ayam",
+    price: 1000,
+    category: "Bakso",
+    emoji: "🍡"
+  },
+  {
+    name: "Bakso Ikan",
+    price: 1000,
+    category: "Bakso",
+    emoji: "🍡"
+  },
+  {
+    name: "Bakso Sapi",
+    price: 1000,
+    category: "Bakso",
+    emoji: "🍡"
+  },
+  {
+    name: "Bakso Urat",
+    price: 1000,
+    category: "Bakso",
+    emoji: "🍡"
+  },
+  {
+    name: "Otak-otak Singapore",
+    price: 1000,
+    category: "Seafood",
+    emoji: "🐟"
+  },
+  {
+    name: "Orange Twister",
+    price: 1000,
+    category: "Seafood",
+    emoji: "🦀"
+  },
+  {
+    name: "Crabstik",
+    price: 1000,
+    category: "Seafood",
+    emoji: "🦀"
+  },
+  {
+    name: "Scallop",
+    price: 1000,
+    category: "Seafood",
+    emoji: "🐚"
+  },
+  {
+    name: "Enoki",
+    price: 1000,
+    category: "Sayuran",
+    emoji: "🍄"
+  },
+  {
+    name: "Indome",
+    price: 1000,
+    category: "Mie",
+    emoji: "🍜"
+  },
+  {
+    name: "Cuanki ALL",
+    price: 1000,
+    category: "Cuanki",
+    emoji: "🍡"
+  },
+  {
+    name: "Krupuk",
+    price: 1000,
+    category: "Lainnya",
+    emoji: "🍘"
+  },
+  {
+    name: "Makaroni",
+    price: 1000,
+    category: "Lainnya",
+    emoji: "🍝"
+  },
+  {
+    name: "Kwetiau",
+    price: 1000,
+    category: "Mie",
+    emoji: "🍜"
+  },
+  {
+    name: "Ekomi / Intermi",
+    price: 1000,
+    category: "Mie",
+    emoji: "🍜"
+  },
+  {
+    name: "Indomie Jumbo",
+    price: 1000,
+    category: "Mie",
+    emoji: "🍜"
+  },
+  {
+    name: "Soun",
+    price: 1000,
+    category: "Mie",
+    emoji: "🍜"
+  },
+  {
+    name: "Mihun",
+    price: 1000,
+    category: "Mie",
+    emoji: "🍜"
+  },
+  {
+    name: "Sosis Cocktail",
+    price: 1000,
+    category: "Olahan",
+    emoji: "🌭"
   }
 ];
+
 
 const menu = document.getElementById("menu");
 const empty = document.getElementById("empty");
