@@ -3,501 +3,162 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#151313">
-<meta name="description" content="Menu topping Seblak CO. Pilih topping favoritmu!">
-<title>Menu Topping | Seblak CO.</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seblak CO | Menu Topping</title>
 <style>
-:root {
-  --bg: #111010;
-  --panel: #1c1919;
-  --red: #e6392e;
-  --text: #ffffff;
-  --muted: #aaa;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, sans-serif;
-}
-
-header {
-  text-align: center;
-  padding: 28px 16px;
-  background: linear-gradient(180deg, #281010, #111010);
-}
-
-.brand {
-  color: var(--red);
-  font-size: 34px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-header p {
-  color: #ccc;
-  margin-top: 8px;
-  font-size: 14px;
-}
-
-.credit {
-  font-size: 12px;
-  color: #888;
-  margin-top: 12px;
-}
-
-.credit a {
-  color: var(--red);
-  text-decoration: none;
-}
-
-.container {
-  max-width: 900px;
-  padding: 20px 14px;
-  margin: auto;
-}
-
-.section-title {
-  font-size: 20px;
-  margin: 15px 0 18px;
-}
-
-.filters {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-}
-
-.filter {
-  background: #242020;
-  color: white;
-  border: 1px solid #393333;
-  padding: 10px 16px;
-  border-radius: 30px;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.filter.active {
-  background: var(--red);
-  border-color: var(--red);
-}
-
-.menu {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.food {
-  background: var(--panel);
-  border: 1px solid #302929;
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.food img {
-  display: block;
-  width: 100%;
-  height: 145px;
-  object-fit: cover;
-  background: #292323;
-}
-
-.food-info {
-  padding: 12px;
-}
-
-.food-name {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.4;
-}
-
-.food-price {
-  color: #ff5146;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.empty {
-  text-align: center;
-  color: var(--muted);
-  padding: 30px;
-  display: none;
-}
-
-.note {
-  background: #1c1919;
-  border: 1px solid #302929;
-  padding: 16px;
-  border-radius: 12px;
-  margin-top: 24px;
-  color: #ccc;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-footer {
-  text-align: center;
-  padding: 28px 15px;
-  color: #888;
-  font-size: 12px;
-}
-
-footer strong {
-  color: var(--red);
-}
-
-@media (min-width: 600px) {
-  .menu {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .food img {
-    height: 180px;
-  }
+*{box-sizing:border-box}
+body{margin:0;background:#100807;color:white;font-family:Arial,sans-serif}
+header{position:sticky;top:0;z-index:10;background:#160908ee;border-bottom:1px solid #651414;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:27px;font-weight:900;font-style:italic}
+.logo span{color:#ff2424}
+nav{display:flex;gap:20px}
+nav a{color:white;text-decoration:none;font-size:14px}
+.hero{padding:65px 6%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;background:linear-gradient(90deg,#160504 20%,#240604bb),url("https://loremflickr.com/1200/800/seblak?lock=100") center/cover}
+.hero h1{font-size:clamp(38px,6vw,65px);margin:0}
+.hero h1 span{color:#ff2525}
+.hero p{font-size:17px;line-height:1.7;color:#eee}
+.hero img{width:100%;height:330px;object-fit:cover;border-radius:25px;border:2px solid #9d1717}
+.btn{display:inline-block;background:#ed1717;padding:15px 27px;border-radius:30px;color:white;text-decoration:none;font-weight:bold}
+.categories{display:flex;gap:10px;overflow-x:auto;padding:25px 5%}
+.cat{white-space:nowrap;border:1px solid #663030;background:#211313;color:white;padding:12px 19px;border-radius:30px;cursor:pointer}
+.cat.active,.cat:hover{background:#c91515}
+.section{padding:20px 5% 60px}
+.section h2{text-align:center;font-size:32px;margin-bottom:30px}
+.section h2 span{color:#ff3030}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:16px}
+.card{background:#1c1111;border:1px solid #542323;border-radius:15px;overflow:hidden;transition:.2s}
+.card:hover{transform:translateY(-5px);border-color:red}
+.card img{width:100%;height:145px;object-fit:cover;background:#302020}
+.card-info{padding:12px;text-align:center}
+.card h3{font-size:15px;margin:5px 0 10px}
+.price{color:#ff3434;font-weight:bold;font-size:17px}
+.about{padding:45px 8%;text-align:center;background:#1c0b0b;line-height:1.8}
+footer{text-align:center;padding:30px;background:#120606;color:#aaa;border-top:2px solid #9d1717}
+@media(max-width:650px){
+header{justify-content:center}
+nav{width:100%;justify-content:center;gap:15px}
+.hero{grid-template-columns:1fr;padding:40px 6%}
+.hero img{height:230px}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.card img{height:125px}
+.card h3{font-size:13px}
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="brand">SEBLAK CO.</div>
-  <p>Pedasnya bikin nagih 🌶️</p>
-  <div class="credit">
-    by <a href="https://instagram.com/boyrll_" target="_blank">boyrll_</a>
-  </div>
+<div class="logo">Seblak <span>CO. 🌶️</span></div>
+<nav>
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#tentang">Tentang</a>
+</nav>
 </header>
 
-<main class="container">
-  <h2 class="section-title">🍜 Menu Topping</h2>
+<section class="hero" id="home">
+<div>
+<h1>Seblak CO.<br><span>Pedasnya Bikin Nagih!</span></h1>
+<p>Beragam pilihan topping seblak dengan rasa yang menggoda. Pilih topping favoritmu!</p>
+<a href="#menu" class="btn">Lihat Menu →</a>
+</div>
+<img src="https://loremflickr.com/900/700/seblak?lock=101" alt="Seblak CO">
+</section>
 
-  <div class="filters">
-    <button class="filter active" data-filter="Semua">Semua</button>
-    <button class="filter" data-filter="Seafood">Seafood</button>
-    <button class="filter" data-filter="Olahan">Olahan</button>
-    <button class="filter" data-filter="Dumpling">Dumpling</button>
-    <button class="filter" data-filter="Lainnya">Lainnya</button>
-  </div>
+<div class="categories" id="categories"></div>
 
-  <div class="menu" id="menu"></div>
-  <div class="empty" id="empty">Menu tidak ditemukan.</div>
+<section class="section" id="menu">
+<h2>Menu <span>Topping</span></h2>
+<div class="grid" id="productGrid"></div>
+</section>
 
-  <div class="note">
-    <strong>✨ Setiap pembelian seblak termasuk:</strong><br>
-    Sayur, bawang goreng, jeruk asam, sendok & sumpit, serta tisu.<br>
-    🥡 Wadah menggunakan paper bowl.<br>
-    ♻️ Sisa topping? Bisa dibungkus gratis!
-  </div>
-</main>
+<section class="about" id="tentang">
+<h2>Tentang Seblak CO.</h2>
+<p>Nikmati berbagai pilihan topping untuk seblak favoritmu. Pilih, racik, dan nikmati sensasi pedasnya!</p>
+</section>
 
 <footer>
-  <strong>SEBLAK CO.</strong><br>
-  Instagram: @seblak_co.id<br>
-  Made with ❤️
+<div class="logo">Seblak <span>CO. 🌶️</span></div>
+<p>Pedasnya Bikin Nagih!</p>
 </footer>
 
 <script>
 const items = [
-
-  {
-  name: "Cikuwa Mini",
-  price: 2000,
-  category: "Olahan",
-  emoji: "🍥",
-  image: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd"
-  },  
-  {
-    name: "Sosis Jumbo Mini",
-    price: 5000,
-    category: "Olahan",
-    emoji: "🌭"
-  },
-  {
-    name: "Fishroll",
-    price: 3000,
-    category: "Seafood",
-    emoji: "🐟"
-  },
-  {
-    name: "Dumpling Ayam",
-    price: 3000,
-    category: "Dumpling",
-    emoji: "🥟"
-  },
-  {
-    name: "Dumpling Keju",
-    price: 3000,
-    category: "Dumpling",
-    emoji: "🧀"
-  },
-  {
-    name: "Otak-otak",
-    price: 1000,
-    category: "Seafood",
-    emoji: "🐟"
-  },
-  {
-    name: "Dimsum",
-    price: 3000,
-    category: "Dumpling",
-    emoji: "🥟"
-  },
-  {
-    name: "Sosis Short Chicken",
-    price: 3000,
-    category: "Olahan",
-    emoji: "🌭"
-  },
-  {
-    name: "Sosis Long Chicken",
-    price: 3000,
-    category: "Olahan",
-    emoji: "🌭"
-  },
-  {
-    name: "Sosis Short Cow",
-    price: 3000,
-    category: "Olahan",
-    emoji: "🌭"
-  },
-  {
-    name: "Sosis Long Cow",
-    price: 3000,
-    category: "Olahan",
-    emoji: "🌭"
-  },
-  {
-    name: "Snow Trip",
-    price: 1000,
-    category: "Seafood",
-    emoji: "🦀"
-  },
-  {
-    name: "Otak-otak Ikan",
-    price: 1000,
-    category: "Seafood",
-    emoji: "🐟"
-  },
-  {
-    name: "Dumpling Chicken",
-    price: 3000,
-    category: "Dumpling",
-    emoji: "🥟"
-  },
-  {
-    name: "Dumpling Cheese",
-    price: 3000,
-    category: "Dumpling",
-    emoji: "🧀"
-  },
-  {
-    name: "Sosis Large",
-    price: 10000,
-    category: "Olahan",
-    emoji: "🌭"
-  },
-  {
-    name: "Sosis Short",
-    price: 1000,
-    category: "Olahan",
-    emoji: "🌭"
-  },
-  {
-    name: "Fisoy",
-    price: 1000,
-    category: "Olahan",
-    emoji: "🍢"
-  },
-  {
-    name: "Bakso Ayam",
-    price: 1000,
-    category: "Bakso",
-    emoji: "🍡"
-  },
-  {
-    name: "Bakso Ikan",
-    price: 1000,
-    category: "Bakso",
-    emoji: "🍡"
-  },
-  {
-    name: "Bakso Sapi",
-    price: 1000,
-    category: "Bakso",
-    emoji: "🍡"
-  },
-  {
-    name: "Bakso Urat",
-    price: 3000,
-    category: "Bakso",
-    emoji: "🍡"
-  },
-  {
-    name: "Otak-otak Singapore",
-    price: 10000,
-    category: "Seafood",
-    emoji: "🐟"
-  },
-  {
-    name: "Orange Twister",
-    price: 3000,
-    category: "Seafood",
-    emoji: "🦀"
-  },
-  {
-    name: "Crabstik",
-    price: 3000,
-    category: "Seafood",
-    emoji: "🦀"
-  },
-  {
-    name: "Scallop",
-    price: 1000,
-    category: "Seafood",
-    emoji: "🐚"
-  },
-  {
-    name: "Enoki",
-    price: 10000,
-    category: "Sayuran",
-    emoji: "🍄"
-  },
-  {
-    name: "Indome",
-    price: 3000,
-    category: "Mie",
-    emoji: "🍜"
-  },
-  {
-    name: "Cuanki ALL",
-    price: 2000,
-    category: "Cuanki",
-    emoji: "🍡"
-  },
-  {
-    name: "Krupuk",
-    price: 1000,
-    category: "Lainnya",
-    emoji: "🍘"
-  },
-  {
-    name: "Makaroni",
-    price: 1000,
-    category: "Lainnya",
-    emoji: "🍝"
-  },
-  {
-    name: "Kwetiau",
-    price: 3000,
-    category: "Mie",
-    emoji: "🍜"
-  },
-  {
-    name: "Ekomi / Intermi",
-    price: 3000,
-    category: "Mie",
-    emoji: "🍜"
-  },
-  {
-    name: "Indomie Jumbo",
-    price: 7000,
-    category: "Mie",
-    emoji: "🍜"
-  },
-  {
-    name: "Soun",
-    price: 1000,
-    category: "Mie",
-    emoji: "🍜"
-  },
-  {
-    name: "Mihun",
-    price: 3000,
-    category: "Mie",
-    emoji: "🍜"
-  },
-  {
-    name: "Sosis Cocktail",
-    price: 3000,
-    category: "Olahan",
-    emoji: "🌭"
-  }
+["Cikuwa Mini",2000,"Olahan","fish cake"],
+["Sosis Jumbo Mini",5000,"Olahan","sausage"],
+["Fishroll",3000,"Fishroll","fish roll"],
+["Dumpling Ayam",3000,"Dumpling","chicken dumpling"],
+["Dumpling Keju",3000,"Dumpling","cheese dumpling"],
+["Otak-otak",1000,"Olahan","fish cake"],
+["Dimsum",3000,"Dumpling","dimsum"],
+["Sosis Short Chicken",1000,"Olahan","chicken sausage"],
+["Sosis Long Chicken",1000,"Olahan","long chicken sausage"],
+["Sosis Short Cow",1000,"Olahan","beef sausage"],
+["Sosis Long Cow",1000,"Olahan","long beef sausage"],
+["Snow Trip",1000,"Olahan","fish cake"],
+["Fisoy",1000,"Olahan","fish tofu"],
+["Bakso Ayam",1000,"Bakso","chicken meatball"],
+["Bakso Ikan",1000,"Bakso","fish ball"],
+["Bakso Sapi",1000,"Bakso","beef meatball"],
+["Bakso Urat",1000,"Bakso","beef tendon meatball"],
+["Otak-otak Singapore",1000,"Olahan","singapore fish cake"],
+["Orange Twister",1000,"Olahan","orange fish cake"],
+["Crabstik",1000,"Olahan","crab stick"],
+["Scallop",1000,"Olahan","scallop"],
+["Enoki",1000,"Sayuran","enoki mushroom"],
+["Indome",1000,"Mie & Lainnya","instant noodles"],
+["Cuanki ALL",1000,"Mie & Lainnya","cuanki"],
+["Krupuk",1000,"Mie & Lainnya","crackers"],
+["Makaroni",1000,"Mie & Lainnya","macaroni"],
+["Kwetiau",1000,"Mie & Lainnya","flat rice noodles"],
+["Ekomi",1000,"Mie & Lainnya","noodles"],
+["Intermi",1000,"Mie & Lainnya","instant noodles"],
+["Indomie Jumbo",1000,"Mie & Lainnya","instant noodles"],
+["Soun",1000,"Mie & Lainnya","glass noodles"],
+["Mihun",1000,"Mie & Lainnya","rice vermicelli"],
+["Sosis Cocktail",1000,"Olahan","cocktail sausage"]
 ];
 
+const categories=["Semua","Olahan","Dumpling","Bakso","Fishroll","Sayuran","Mie & Lainnya"];
+let selected="Semua";
+const categoryBox=document.getElementById("categories");
+const grid=document.getElementById("productGrid");
 
-const menu = document.getElementById("menu");
-const empty = document.getElementById("empty");
-
-function formatPrice(price) {
-  return "Rp" + price.toLocaleString("id-ID");
-}
-
-function render(filter = "Semua") {
-  const shown = items.filter(item =>
-    filter === "Semua" || item.category === filter
-  );
-
-  menu.innerHTML = "";
-
-  shown.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "food";
-
-    const img = document.createElement("img");
-img.src = item.image || "";
-img.alt = item.name;
-img.loading = "lazy";
-
-img.onerror = function() {
-  img.style.display = "none";
+categories.forEach(cat=>{
+const btn=document.createElement("button");
+btn.className="cat"+(cat==="Semua"?" active":"");
+btn.textContent=cat;
+btn.onclick=()=>{
+selected=cat;
+document.querySelectorAll(".cat").forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+render();
 };
-    const info = document.createElement("div");
-    info.className = "food-info";
-
-    const name = document.createElement("div");
-    name.className = "food-name";
-    name.textContent = item.name;
-
-    const price = document.createElement("div");
-    price.className = "food-price";
-    price.textContent = formatPrice(item.price);
-
-    info.appendChild(name);
-    info.appendChild(price);
-    card.appendChild(img);
-    card.appendChild(info);
-    menu.appendChild(card);
-  });
-
-  empty.style.display = shown.length ? "none" : "block";
-}
-
-document.querySelectorAll(".filter").forEach(button => {
-  button.addEventListener("click", () => {
-    document.querySelector(".filter.active")
-      ?.classList.remove("active");
-
-    button.classList.add("active");
-    render(button.dataset.filter);
-  });
+categoryBox.appendChild(btn);
 });
 
+function render(){
+grid.innerHTML="";
+items.filter(item=>selected==="Semua"||item[2]===selected).forEach((item,index)=>{
+const card=document.createElement("div");
+card.className="card";
+const img=document.createElement("img");
+img.src=`https://loremflickr.com/500/400/${encodeURIComponent(item[3])}?lock=${index+200}`;
+img.alt=item[0];
+img.loading="lazy";
+const info=document.createElement("div");
+info.className="card-info";
+const name=document.createElement("h3");
+name.textContent=item[0];
+const price=document.createElement("div");
+price.className="price";
+price.textContent="Rp "+item[1].toLocaleString("id-ID");
+info.append(name,price);
+card.append(img,info);
+grid.appendChild(card);
+});
+}
 render();
 </script>
-
 </body>
 </html>
