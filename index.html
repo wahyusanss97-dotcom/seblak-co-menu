@@ -120,7 +120,8 @@ const items = [
 const categories=["Semua","Olahan","Dumpling","Bakso","Fishroll","Sayuran","Mie & Lainnya"];
 let selected="Semua";
 const categoryBox=document.getElementById("categories");
-const grid=document.getElementById("productGrid");
+con
+  st grid=document.getElementById("productGrid");
 
 categories.forEach(cat=>{
 const btn=document.createElement("button");
@@ -135,26 +136,36 @@ render();
 categoryBox.appendChild(btn);
 });
 
+
 function render(){
-grid.innerHTML="";
-items.filter(item=>selected==="Semua"||item[2]===selected).forEach((item,index)=>{
-const card=document.createElement("div");
-card.className="card";
-const img=document.createElement("img");
-img.src=`https://loremflickr.com/500/400/${encodeURIComponent(item[3])}?lock=${index+200}`;
-img.alt=item[0];
-img.loading="lazy";
-const info=document.createElement("div");
-info.className="card-info";
-const name=document.createElement("h3");
-name.textContent=item[0];
-const price=document.createElement("div");
-price.className="price";
-price.textContent="Rp "+item[1].toLocaleString("id-ID");
-info.append(name,price);
-card.append(img,info);
-grid.appendChild(card);
-});
+  grid.innerHTML = "";
+
+  items
+    .filter(item => selected === "Semua" || item[2] === selected)
+    .forEach((item, index) => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const img = document.createElement("img");
+      img.src = "https://loremflickr.com/500/400/food?lock=" + (index + 1);
+      img.alt = item[0];
+      img.loading = "lazy";
+
+      const info = document.createElement("div");
+      info.className = "card-info";
+
+      const name = document.createElement("h3");
+      name.textContent = item[0];
+
+      const price = document.createElement("div");
+      price.className = "price";
+      price.textContent = "Rp " + item[1].toLocaleString("id-ID");
+
+      info.append(name, price);
+      card.append(img, info);
+      grid.appendChild(card);
+    });
+  
 }
 render();
 </script>
