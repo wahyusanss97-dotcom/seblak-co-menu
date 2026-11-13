@@ -3,52 +3,40 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Seblak CO | Menu Topping</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#100807;color:white;font-family:Arial,sans-serif}
-header{position:sticky;top:0;z-index:10;background:#160908ee;border-bottom:1px solid #651414;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.logo{font-size:27px;font-weight:900;font-style:italic}
-.logo span{color:#ff2424}
-nav{display:flex;gap:20px}
+header{background:#190909;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;border-bottom:1px solid #702020;position:sticky;top:0;z-index:10}
+.logo{font-size:25px;font-weight:900;font-style:italic}
+.logo span,.red{color:#ff3030}
+nav{display:flex;gap:18px}
 nav a{color:white;text-decoration:none;font-size:14px}
-.hero{padding:65px 6%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;background:linear-gradient(90deg,#160504 20%,#240604bb),url("https://images.unsplash.com/photo-1569718212165-3a8278d5f624") center/cover}
-.hero h1{font-size:clamp(38px,6vw,65px);margin:0}
-.hero h1 span{color:#ff2525}
-.hero p{font-size:17px;line-height:1.7;color:#eee}
-.hero img{width:100%;height:330px;object-fit:cover;border-radius:25px;border:2px solid #9d1717}
-.btn{display:inline-block;background:#ed1717;padding:15px 27px;border-radius:30px;color:white;text-decoration:none;font-weight:bold}
-.categories{display:flex;gap:10px;overflow-x:auto;padding:25px 5%}
-.cat{white-space:nowrap;border:1px solid #663030;background:#211313;color:white;padding:12px 19px;border-radius:30px;cursor:pointer}
-.cat.active,.cat:hover{background:#c91515}
-.section{padding:20px 5% 60px}
-.section h2{text-align:center;font-size:32px;margin-bottom:30px}
-.section h2 span{color:#ff3030}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:16px}
-.card{background:#1c1111;border:1px solid #542323;border-radius:15px;overflow:hidden;transition:.2s}
-.card:hover{transform:translateY(-5px);border-color:red}
-.card img{width:100%;height:145px;object-fit:cover;background:#302020}
-.card-info{padding:12px;text-align:center}
-.card h3{font-size:15px;margin:5px 0 10px}
-.price{color:#ff3434;font-weight:bold;font-size:17px}
-.about{padding:45px 8%;text-align:center;background:#1c0b0b;line-height:1.8}
-footer{text-align:center;padding:30px;background:#120606;color:#aaa;border-top:2px solid #9d1717}
-@media(max-width:650px){
-header{justify-content:center}
-nav{width:100%;justify-content:center;gap:15px}
-.hero{grid-template-columns:1fr;padding:40px 6%}
-.hero img{height:230px}
-.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.card img{height:125px}
-.card h3{font-size:13px}
-}
+.hero{padding:55px 6%;background:linear-gradient(90deg,#160606,#390b0bdd),url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1200') center/cover}
+.hero h1{font-size:clamp(35px,7vw,60px);margin:0 0 15px}
+.hero p{line-height:1.7;color:#eee;max-width:500px}
+.btn{display:inline-block;background:#e51d2a;color:white;padding:13px 24px;border-radius:30px;text-decoration:none;font-weight:bold}
+.categories{display:flex;gap:9px;overflow-x:auto;padding:22px 5%}
+.cat{white-space:nowrap;background:#241313;border:1px solid #713030;color:white;padding:11px 17px;border-radius:25px}
+.cat.active{background:#d71920}
+.section{padding:20px 5% 55px}
+.section h2{text-align:center;font-size:30px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:#211313;border:1px solid #542323;border-radius:14px;overflow:hidden}
+.card img{width:100%;height:135px;object-fit:cover;background:#392020}
+.card-info{text-align:center;padding:12px 5px}
+.card h3{font-size:14px;margin:4px 0 9px}
+.price{color:#ff4545;font-size:17px;font-weight:bold}
+.about{text-align:center;padding:40px 8%;background:#1d0b0b;line-height:1.8}
+footer{text-align:center;padding:25px;background:#100606;color:#aaa}
+@media(min-width:700px){.grid{grid-template-columns:repeat(4,1fr)}.hero{padding:85px 8%}.card img{height:180px}}
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">Seblak <span>CO. 🌶️</span></div>
+<div class="logo">SEBLAK <span class="red">CO. 🌶️</span></div>
 <nav>
 <a href="#home">Home</a>
 <a href="#menu">Menu</a>
@@ -57,71 +45,69 @@ nav{width:100%;justify-content:center;gap:15px}
 </header>
 
 <section class="hero" id="home">
-<div>
-<h1>Seblak CO.<br><span>Pedasnya Bikin Nagih!</span></h1>
-<p>Beragam pilihan topping seblak dengan rasa yang menggoda. Pilih topping favoritmu!</p>
-<a href="#menu" class="btn">Lihat Menu →</a>
-</div>
-<img.src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500";
+<h1>SEBLAK CO.<br><span class="red">PEDASNYA BIKIN NAGIH!</span></h1>
+<p>Beragam pilihan topping. Pilih, racik, dan nikmati seblak favoritmu!</p>
+<a href="#menu" class="btn">LIHAT MENU ↓</a>
+</section>
+
 <div class="categories" id="categories"></div>
 
 <section class="section" id="menu">
-<h2>Menu <span>Topping</span></h2>
+<h2>MENU <span class="red">TOPPING</span></h2>
 <div class="grid" id="productGrid"></div>
 </section>
 
 <section class="about" id="tentang">
 <h2>Tentang Seblak CO.</h2>
-<p>Nikmati berbagai pilihan topping untuk seblak favoritmu. Pilih, racik, dan nikmati sensasi pedasnya!</p>
+<p>Nikmati berbagai pilihan topping untuk seblak favoritmu. Pilih topping kesukaanmu dan racik sesuai selera!</p>
 </section>
 
 <footer>
-<div class="logo">Seblak <span>CO. 🌶️</span></div>
+<div class="logo">SEBLAK <span class="red">CO. 🌶️</span></div>
 <p>Pedasnya Bikin Nagih!</p>
 </footer>
 
 <script>
 const items = [
-["Cikuwa Mini",2000,"Olahan","fish cake"],
-["Sosis Jumbo Mini",5000,"Olahan","sausage"],
-["Fishroll",3000,"Fishroll","fish roll"],
-["Dumpling Ayam",3000,"Dumpling","chicken dumpling"],
-["Dumpling Keju",3000,"Dumpling","cheese dumpling"],
-["Otak-otak",1000,"Olahan","fish cake"],
-["Dimsum",3000,"Dumpling","dimsum"],
-["Sosis Short Chicken",1000,"Olahan","chicken sausage"],
-["Sosis Long Chicken",1000,"Olahan","long chicken sausage"],
-["Sosis Short Cow",1000,"Olahan","beef sausage"],
-["Sosis Long Cow",1000,"Olahan","long beef sausage"],
-["Snow Trip",1000,"Olahan","fish cake"],
-["Fisoy",1000,"Olahan","fish tofu"],
-["Bakso Ayam",1000,"Bakso","chicken meatball"],
-["Bakso Ikan",1000,"Bakso","fish ball"],
-["Bakso Sapi",1000,"Bakso","beef meatball"],
-["Bakso Urat",1000,"Bakso","beef tendon meatball"],
-["Otak-otak Singapore",1000,"Olahan","singapore fish cake"],
-["Orange Twister",1000,"Olahan","orange fish cake"],
-["Crabstik",1000,"Olahan","crab stick"],
-["Scallop",1000,"Olahan","scallop"],
-["Enoki",1000,"Sayuran","enoki mushroom"],
-["Indome",1000,"Mie & Lainnya","instant noodles"],
-["Cuanki ALL",1000,"Mie & Lainnya","cuanki"],
-["Krupuk",1000,"Mie & Lainnya","crackers"],
-["Makaroni",1000,"Mie & Lainnya","macaroni"],
-["Kwetiau",1000,"Mie & Lainnya","flat rice noodles"],
-["Ekomi",1000,"Mie & Lainnya","noodles"],
-["Intermi",1000,"Mie & Lainnya","instant noodles"],
-["Indomie Jumbo",1000,"Mie & Lainnya","instant noodles"],
-["Soun",1000,"Mie & Lainnya","glass noodles"],
-["Mihun",1000,"Mie & Lainnya","rice vermicelli"],
-["Sosis Cocktail",1000,"Olahan","cocktail sausage"]
+["Cikuwa Mini",2000,"Olahan","🍥"],
+["Sosis Jumbo Mini",5000,"Olahan","🌭"],
+["Fishroll",3000,"Fishroll","🍢"],
+["Dumpling Ayam",3000,"Dumpling","🥟"],
+["Dumpling Keju",3000,"Dumpling","🥟"],
+["Otak-otak",1000,"Olahan","🍢"],
+["Dimsum",3000,"Dumpling","🥟"],
+["Sosis Short Chicken",1000,"Olahan","🌭"],
+["Sosis Long Chicken",1000,"Olahan","🌭"],
+["Sosis Short Cow",1000,"Olahan","🌭"],
+["Sosis Long Cow",1000,"Olahan","🌭"],
+["Snow Trip",1000,"Olahan","🍥"],
+["Fisoy",1000,"Olahan","🍢"],
+["Bakso Ayam",1000,"Bakso","🍡"],
+["Bakso Ikan",1000,"Bakso","🍡"],
+["Bakso Sapi",1000,"Bakso","🍡"],
+["Bakso Urat",1000,"Bakso","🍡"],
+["Otak-otak Singapore",1000,"Olahan","🍢"],
+["Orange Twister",1000,"Olahan","🍥"],
+["Crabstik",1000,"Olahan","🦀"],
+["Scallop",1000,"Olahan","🍥"],
+["Enoki",1000,"Sayuran","🍄"],
+["Indome",1000,"Mie & Lainnya","🍜"],
+["Cuanki ALL",1000,"Mie & Lainnya","🍜"],
+["Krupuk",1000,"Mie & Lainnya","🥨"],
+["Makaroni",1000,"Mie & Lainnya","🍝"],
+["Kwetiau",1000,"Mie & Lainnya","🍜"],
+["Ekomi",1000,"Mie & Lainnya","🍜"],
+["Intermi",1000,"Mie & Lainnya","🍜"],
+["Indomie Jumbo",1000,"Mie & Lainnya","🍜"],
+["Soun",1000,"Mie & Lainnya","🍜"],
+["Mihun",1000,"Mie & Lainnya","🍜"],
+["Sosis Cocktail",1000,"Olahan","🌭"]
 ];
 
 const categories=["Semua","Olahan","Dumpling","Bakso","Fishroll","Sayuran","Mie & Lainnya"];
 let selected="Semua";
 const categoryBox=document.getElementById("categories");
-con
-  st grid=document.getElementById("productGrid");
+const grid=document.getElementById("productGrid");
 
 categories.forEach(cat=>{
 const btn=document.createElement("button");
@@ -136,36 +122,25 @@ render();
 categoryBox.appendChild(btn);
 });
 
-
 function render(){
-  grid.innerHTML = "";
-
-  items
-    .filter(item => selected === "Semua" || item[2] === selected)
-    .forEach((item, index) => {
-      const card = document.createElement("div");
-      card.className = "card";
-
-      const img = document.createElement("img");
-      img.src = "https://loremflickr.com/500/400/food?lock=" + (index + 1);
-      img.alt = item[0];
-      img.loading = "lazy";
-
-      const info = document.createElement("div");
-      info.className = "card-info";
-
-      const name = document.createElement("h3");
-      name.textContent = item[0];
-
-      const price = document.createElement("div");
-      price.className = "price";
-      price.textContent = "Rp " + item[1].toLocaleString("id-ID");
-
-      info.append(name, price);
-      card.append(img, info);
-      grid.appendChild(card);
-    });
-  
+grid.innerHTML="";
+items.filter(item=>selected==="Semua"||item[2]===selected).forEach(item=>{
+const card=document.createElement("div");
+card.className="card";
+const img=document.createElement("div");
+img.style.cssText="height:135px;display:flex;align-items:center;justify-content:center;font-size:65px;background:linear-gradient(135deg,#351313,#170909)";
+img.textContent=item[3];
+const info=document.createElement("div");
+info.className="card-info";
+const name=document.createElement("h3");
+name.textContent=item[0];
+const price=document.createElement("div");
+price.className="price";
+price.textContent="Rp "+item[1].toLocaleString("id-ID");
+info.append(name,price);
+card.append(img,info);
+grid.appendChild(card);
+});
 }
 render();
 </script>
